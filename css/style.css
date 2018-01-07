@@ -1,0 +1,215 @@
+body, html {
+    height: 100%;
+}
+/* content */
+
+.page1{
+	
+}
+.one{
+	background:url(../img/bb.jpg) no-repeat ;
+	height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.one .page-container{
+	position: absolute;
+	bottom: 100px;
+	margin-left: -400px;
+	left: 50%;
+	margin-bottom: 150px;
+	max-width: 650px;
+}
+.one .page-container h2{
+	font-size: 3em;
+	color: white;
+}
+.one .page-container h3{
+	padding: 0px 140px;
+	font-size: 3em;
+	color: white;
+}
+.one .page-container p{
+	padding: 0px 130px;
+	line-height: 2em;
+	color: white;
+}
+
+
+.page2{
+	
+}
+
+.two{
+	background:url(../img/bl.jpg) no-repeat ;
+}
+
+.two .page-container{
+	position: absolute;
+	bottom: -50px;
+	margin-left: -500px;
+	left: 50%;
+	margin-bottom: 150px;
+	max-width: 960px;
+}
+.page3{
+	
+}
+.three{
+	background:url(../img/merah.jpg) no-repeat ;
+	height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.three .page-container{
+	position:absolute;
+	color: #ffffff;
+	bottom: 50px;
+	margin-left: -400px;
+	left: 50%;
+	margin-bottom: 200px;
+	max-width: 960px;
+	border-bottom-color: #ce352c;
+}
+.page4{
+	
+}
+.four{
+	background-color: #ffffff;
+}
+
+.four .page-container{
+
+}
+
+@media screen and (max-width:980px) {
+	
+	#wrapper{
+		width: 96%;
+	}
+	#maincontent{
+		width: 66%;
+	}
+	#sidebar{
+		width: 30%;
+	}
+	#page-container{
+		width: 50%
+	}
+}
+
+@media screen and (max-width:680px){
+	
+	#maincontent{
+		width: auto;
+		float: none;
+	}
+	#sidebar{
+		width: auto;
+		float: none;
+	}
+	#page-container{
+		width: auto;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	
+	#header{
+		height: auto;
+	}
+	#sidebar{
+		display: none;
+	}
+	#page-container{
+		height: auto;
+	}
+
+}
+.carousel-wrapper{
+  height:400px;
+  position:relative;
+  width:800px;
+  margin:0 auto;
+}
+.carousel-item{
+  position:absolute;
+  top:100px;
+  bottom:-200px;
+  left:-180px;
+  right:-200px;
+  padding:80px 80px;
+  opacity:0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow{
+  position:absolute;
+  top:0;
+  display:block;
+  width:50px;
+  height:100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
+}
+
+.arrow-prev{
+  left:0;
+}
+ 
+.arrow-next{
+    right:0;
+    -webkit-transform: rotate(180deg);
+     transform: rotate(180deg);
+  }
+
+.light{
+  color:white;
+}
+
+@media (max-width: 480px) {
+      .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+    }
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+  }
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+  background:url(../img/1t.jpg);
+  background-size:cover;
+   background-position: center;
+  }
+.item-2{
+  background:url(../img/vip1.jpg);
+   background-size:cover;
+   background-position: center;
+}
+.item-3{
+  background:url('https://static.pexels.com/photos/6529/lake-kajak-kayak-large.jpg');
+   background-size:cover;
+    background-position: center;
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+  }
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+  }
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  }
+}
